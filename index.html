@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seerat-e-Nabi Course &mdash; Weekly Quiz 1 Result | Markaz Ibn Abbas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=EB+Garamond:wght@400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --parchment: #f4ead2;
+    --parchment-deep: #e9d9b3;
+    --cream: #faf3e2;
+    --maroon: #7a2b1d;
+    --maroon-deep: #5c1f14;
+    --gold: #b8862f;
+    --gold-light: #d4a94f;
+    --brown: #5a3c22;
+    --ink: #3a2a1c;
+    --line: #d9c294;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--parchment);
+    background-image:
+      radial-gradient(circle at 15% 8%, rgba(184,134,47,0.10), transparent 45%),
+      radial-gradient(circle at 90% 90%, rgba(122,43,29,0.08), transparent 50%);
+    font-family: 'EB Garamond', serif;
+    color: var(--ink);
+    padding: 28px 16px 48px;
+  }
+
+  .sheet {
+    max-width: 980px;
+    margin: 0 auto;
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 18px 45px rgba(90,60,25,0.18), 0 2px 8px rgba(90,60,25,0.10);
+  }
+
+  .banner-wrap {
+    position: relative;
+    line-height: 0;
+  }
+  .banner-wrap img {
+    width: 100%;
+    display: block;
+  }
+
+  .meta-strip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 18px 30px;
+    background: linear-gradient(90deg, var(--maroon-deep), var(--maroon) 55%, var(--maroon-deep));
+    color: var(--parchment);
+  }
+  .meta-strip .title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 26px;
+    letter-spacing: 0.03em;
+  }
+  .meta-strip .title small {
+    display: block;
+    font-family: 'EB Garamond', serif;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    margin-bottom: 2px;
+  }
+  .meta-strip .date {
+    font-size: 15px;
+    color: var(--parchment);
+    background: rgba(0,0,0,0.15);
+    border: 1px solid rgba(212,169,79,0.5);
+    padding: 6px 16px;
+    border-radius: 999px;
+    letter-spacing: 0.03em;
+  }
+
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .stat {
+    background: var(--parchment);
+    padding: 16px 10px;
+    text-align: center;
+  }
+  .stat .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--maroon);
+  }
+  .stat .lbl {
+    font-size: 12.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--brown);
+    opacity: 0.85;
+  }
+
+  .table-area {
+    padding: 26px 22px 10px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+  }
+
+  thead th {
+    text-align: left;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--cream);
+    background: var(--maroon-deep);
+    padding: 12px 14px;
+  }
+  thead th:first-child { border-radius: 8px 0 0 8px; text-align: center; }
+  thead th:last-child { border-radius: 0 8px 8px 0; }
+
+  tbody tr {
+    border-bottom: 1px solid var(--line);
+  }
+  tbody tr:nth-child(even) { background: rgba(184,134,47,0.06); }
+  tbody tr:hover { background: rgba(184,134,47,0.14); }
+
+  tbody tr.r1 { background: rgba(184,134,47,0.22); }
+  tbody tr.r1:nth-child(even) { background: rgba(184,134,47,0.26); }
+  tbody tr.r2 { background: rgba(184,134,47,0.10); }
+
+  td { padding: 11px 14px; vertical-align: middle; }
+
+  .cell-rank { text-align: center; width: 64px; }
+  .rank-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 34px;
+    height: 34px;
+    padding: 0 6px;
+    border-radius: 50%;
+    background: var(--brown);
+    color: var(--cream);
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  tr.r1 .rank-badge { background: linear-gradient(160deg, var(--gold-light), var(--gold) 70%); color: var(--maroon-deep); box-shadow: 0 0 0 2px rgba(122,43,29,0.25); }
+
+  .cell-name { font-weight: 600; color: var(--ink); width: 30%; }
+  .cell-father { color: var(--brown); width: 34%; }
+  .ar-text { font-family: 'Amiri', serif; font-size: 17px; }
+
+  .cell-score { width: 170px; }
+  .score-wrap { display: flex; align-items: baseline; gap: 3px; flex-wrap: wrap; }
+  .score-num { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 19px; color: var(--maroon); }
+  .score-max { font-size: 12.5px; color: var(--brown); opacity: 0.75; margin-right: 8px; }
+  .score-bar { flex: 1 1 70px; height: 6px; border-radius: 4px; background: rgba(90,60,25,0.14); overflow: hidden; margin-left: 2px; align-self: center; min-width: 60px; }
+  .score-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--gold), var(--maroon)); }
+
+  .contact-strip {
+    margin: 22px 22px 26px;
+    padding: 18px 22px;
+    background: var(--parchment-deep);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .contact-strip .label {
+    font-size: 14.5px;
+    color: var(--brown);
+  }
+  .contact-strip a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(160deg, #2fae5a, #1e8a45);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 9px 20px;
+    border-radius: 999px;
+    box-shadow: 0 4px 12px rgba(30,138,69,0.35);
+  }
+  .contact-strip a svg { width: 18px; height: 18px; fill: #fff; }
+
+  footer.note {
+    text-align: center;
+    font-size: 12.5px;
+    color: var(--brown);
+    opacity: 0.75;
+    padding-bottom: 26px;
+  }
+
+  @media (max-width: 640px) {
+    .table-area { padding: 18px 10px 6px; }
+    table, thead, tbody, th, td, tr { display: block; }
+    thead { display: none; }
+    tbody tr {
+      background: var(--cream) !important;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      margin-bottom: 10px;
+      padding: 10px 12px;
+      position: relative;
+    }
+    tbody tr.r1 { background: rgba(184,134,47,0.18) !important; border-color: var(--gold); }
+    td { padding: 4px 0; border: none; }
+    .cell-rank { position: absolute; top: 10px; right: 12px; width: auto; }
+    .cell-name { padding-right: 50px; font-size: 17px; }
+    .cell-father::before { content: "Father: "; font-size: 12px; opacity: 0.7; }
+    .cell-score { width: auto; margin-top: 4px; }
+    .meta-strip { padding: 14px 18px; }
+    .stats-row { grid-template-columns: repeat(3, 1fr); }
+    .stat .num { font-size: 22px; }
+    .stat .lbl { font-size: 10.5px; }
+  }
+</style>
+</head>
+<body>
+  <div class="sheet">
+    <div class="banner-wrap">
+      <img src="banner.png" alt="Seerat-e-Nabi Course - Weekly Quiz 1">
+    </div>
+
+    <div class="meta-strip">
+      <div class="title"><small>Markaz Ibn Abbas</small>Weekly Quiz 1 &mdash; Result</div>
+      <div class="date">05 July 2026</div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat"><div class="num">77</div><div class="lbl">Students</div></div>
+      <div class="stat"><div class="num">7</div><div class="lbl">Scored 20/20</div></div>
+      <div class="stat"><div class="num">15.8</div><div class="lbl">Average Score</div></div>
+    </div>
+
+    <div class="table-area">
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Father's Name</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody>
+      <tr class="r1">
+        <td class="cell-rank"><span class="rank-badge">1</span></td>
+        <td class="cell-name"><span>Falak</span></td>
+        <td class="cell-father"><span>Farid</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">20</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:100%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r1">
+        <td class="cell-rank"><span class="rank-badge">1</span></td>
+        <td class="cell-name"><span>Nusrath jabeen</span></td>
+        <td class="cell-father"><span>Mohammad kareem</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">20</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:100%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r1">
+        <td class="cell-rank"><span class="rank-badge">1</span></td>
+        <td class="cell-name"><span>Uzma Parvez</span></td>
+        <td class="cell-father"><span>Parvez Alam</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">20</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:100%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r1">
+        <td class="cell-rank"><span class="rank-badge">1</span></td>
+        <td class="cell-name"><span>Sahanaj Khatun</span></td>
+        <td class="cell-father"><span>Md.Abul Hossain</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">20</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:100%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r1">
+        <td class="cell-rank"><span class="rank-badge">1</span></td>
+        <td class="cell-name"><span>Sana Farheen</span></td>
+        <td class="cell-father"><span>Syed Gaziuddin</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">20</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:100%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r1">
+        <td class="cell-rank"><span class="rank-badge">1</span></td>
+        <td class="cell-name"><span>Amena fathima</span></td>
+        <td class="cell-father"><span>Syed Ahmed ali</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">20</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:100%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r1">
+        <td class="cell-rank"><span class="rank-badge">1</span></td>
+        <td class="cell-name"><span>Aasmeen aameen</span></td>
+        <td class="cell-father"><span>Aameen khan</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">20</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:100%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r2">
+        <td class="cell-rank"><span class="rank-badge">8</span></td>
+        <td class="cell-name"><span>Naziya binte Mohammad</span></td>
+        <td class="cell-father"><span>Mohammad Subhan Sharif</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">19</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:95%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r2">
+        <td class="cell-rank"><span class="rank-badge">8</span></td>
+        <td class="cell-name"><span>Saba Afreen</span></td>
+        <td class="cell-father"><span>Dr  Moh. Nazim Hussain</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">19</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:95%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r2">
+        <td class="cell-rank"><span class="rank-badge">8</span></td>
+        <td class="cell-name"><span>Saba khanam</span></td>
+        <td class="cell-father"><span>Khursheed Ali khan</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">19</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:95%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r2">
+        <td class="cell-rank"><span class="rank-badge">8</span></td>
+        <td class="cell-name"><span>Haya fatima</span></td>
+        <td class="cell-father"><span>Ahmed khaleeq</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">19</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:95%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r2">
+        <td class="cell-rank"><span class="rank-badge">8</span></td>
+        <td class="cell-name"><span>NIDA</span></td>
+        <td class="cell-father"><span>Sabir Hussain</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">19</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:95%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r2">
+        <td class="cell-rank"><span class="rank-badge">8</span></td>
+        <td class="cell-name"><span>Fatima khan</span></td>
+        <td class="cell-father"><span>Mohd shoeb</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">19</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:95%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r2">
+        <td class="cell-rank"><span class="rank-badge">8</span></td>
+        <td class="cell-name"><span>Ayesha firdous</span></td>
+        <td class="cell-father"><span>Krishna Naik</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">19</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:95%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r2">
+        <td class="cell-rank"><span class="rank-badge">8</span></td>
+        <td class="cell-name"><span>Sahiba Parveen</span></td>
+        <td class="cell-father"><span>Mohd. Nasiruddin</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">19</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:95%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r2">
+        <td class="cell-rank"><span class="rank-badge">8</span></td>
+        <td class="cell-name"><span>Sabiha Firdous</span></td>
+        <td class="cell-father"><span>Md Ibrahim Qureshi</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">19</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:95%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r2">
+        <td class="cell-rank"><span class="rank-badge">8</span></td>
+        <td class="cell-name"><span>Nishath Jabeen</span></td>
+        <td class="cell-father"><span>Abdul Kareem uddin</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">19</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:95%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r2">
+        <td class="cell-rank"><span class="rank-badge">8</span></td>
+        <td class="cell-name"><span>Tarannum sayyed</span></td>
+        <td class="cell-father"><span>Iqbal sayyed</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">19</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:95%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r2">
+        <td class="cell-rank"><span class="rank-badge">8</span></td>
+        <td class="cell-name"><span>Sayeda Hafsa</span></td>
+        <td class="cell-father"><span>Mir Azmat Ali Imran</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">19</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:95%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r3">
+        <td class="cell-rank"><span class="rank-badge">20</span></td>
+        <td class="cell-name"><span>Reshma</span></td>
+        <td class="cell-father"><span>Ansarullah</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">18</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:90%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r3">
+        <td class="cell-rank"><span class="rank-badge">20</span></td>
+        <td class="cell-name"><span>Fatima</span></td>
+        <td class="cell-father"><span>Mahmood kazia</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">18</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:90%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r3">
+        <td class="cell-rank"><span class="rank-badge">20</span></td>
+        <td class="cell-name"><span>Tahira khan</span></td>
+        <td class="cell-father"><span>Abdurraheem khan</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">18</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:90%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r3">
+        <td class="cell-rank"><span class="rank-badge">20</span></td>
+        <td class="cell-name"><span>Zaheda</span></td>
+        <td class="cell-father"><span>Hashim salfi</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">18</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:90%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r3">
+        <td class="cell-rank"><span class="rank-badge">20</span></td>
+        <td class="cell-name"><span>Aaliya mohsin attar</span></td>
+        <td class="cell-father"><span>Mohsin attar</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">18</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:90%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r3">
+        <td class="cell-rank"><span class="rank-badge">20</span></td>
+        <td class="cell-name"><span dir="rtl" lang="ar" class="ar-text">بشریٰ عفاف</span></td>
+        <td class="cell-father"><span dir="rtl" lang="ar" class="ar-text">جمیل احمد</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">18</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:90%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r3">
+        <td class="cell-rank"><span class="rank-badge">20</span></td>
+        <td class="cell-name"><span>Md. Nahdia Sireen</span></td>
+        <td class="cell-father"><span>Md. Shahid Anwar</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">18</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:90%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r3">
+        <td class="cell-rank"><span class="rank-badge">20</span></td>
+        <td class="cell-name"><span>Samrin Parvin</span></td>
+        <td class="cell-father"><span>Shamim Khan</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">18</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:90%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r3">
+        <td class="cell-rank"><span class="rank-badge">20</span></td>
+        <td class="cell-name"><span>Aaisha</span></td>
+        <td class="cell-father"><span>Saeed Ahmad</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">18</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:90%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r3">
+        <td class="cell-rank"><span class="rank-badge">20</span></td>
+        <td class="cell-name"><span>Iqra Anam</span></td>
+        <td class="cell-father"><span>Zakir Shakeel</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">18</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:90%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r3">
+        <td class="cell-rank"><span class="rank-badge">20</span></td>
+        <td class="cell-name"><span>Isra</span></td>
+        <td class="cell-father"><span>sadiq</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">18</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:90%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r3">
+        <td class="cell-rank"><span class="rank-badge">20</span></td>
+        <td class="cell-name"><span>Nafisha Parveen</span></td>
+        <td class="cell-father"><span>Jafar Ansari</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">18</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:90%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r3">
+        <td class="cell-rank"><span class="rank-badge">20</span></td>
+        <td class="cell-name"><span>Aaliya binte aamin</span></td>
+        <td class="cell-father"><span>Aamin</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">18</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:90%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="r3">
+        <td class="cell-rank"><span class="rank-badge">20</span></td>
+        <td class="cell-name"><span>Arshiya Begum</span></td>
+        <td class="cell-father"><span>Mohammed Abdul Aziz</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">18</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:90%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">34</span></td>
+        <td class="cell-name"><span>Shabbu khatoon</span></td>
+        <td class="cell-father"><span>Mehdi Hasan Ansari</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">17</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:85%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">34</span></td>
+        <td class="cell-name"><span>Sana</span></td>
+        <td class="cell-father"><span>Farid</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">17</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:85%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">34</span></td>
+        <td class="cell-name"><span>Nikhat parvin</span></td>
+        <td class="cell-father"><span>Md.Aslam</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">17</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:85%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">34</span></td>
+        <td class="cell-name"><span>Mohsin khan</span></td>
+        <td class="cell-father"><span>Abdul Raheem</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">17</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:85%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">34</span></td>
+        <td class="cell-name"><span>Zainab parveen</span></td>
+        <td class="cell-father"><span>Shakeel uddin</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">17</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:85%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">34</span></td>
+        <td class="cell-name"><span>Muskan</span></td>
+        <td class="cell-father"><span>Abdul Jabbar</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">17</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:85%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">34</span></td>
+        <td class="cell-name"><span>Sarah</span></td>
+        <td class="cell-father"><span>Ali jaidi</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">17</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:85%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">34</span></td>
+        <td class="cell-name"><span>Shahida farha</span></td>
+        <td class="cell-father"><span>Allah bakash</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">17</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:85%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">34</span></td>
+        <td class="cell-name"><span>Fatma Aysha</span></td>
+        <td class="cell-father"><span>Dr Zakir Shakeel</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">17</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:85%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">34</span></td>
+        <td class="cell-name"><span>Kousar</span></td>
+        <td class="cell-father"><span>Mohd abdul qhayyum sahab</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">17</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:85%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">34</span></td>
+        <td class="cell-name"><span>Kousar</span></td>
+        <td class="cell-father"><span>Mohd abdul qhayyum sahab</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">17</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:85%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">34</span></td>
+        <td class="cell-name"><span>Raziya Dyamnal</span></td>
+        <td class="cell-father"><span>Usman Sab Dyamnal</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">17</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:85%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">34</span></td>
+        <td class="cell-name"><span>Asma begum</span></td>
+        <td class="cell-father"><span>Abdul hameed</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">17</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:85%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">47</span></td>
+        <td class="cell-name"><span>Mohammadi Begum</span></td>
+        <td class="cell-father"><span>Mohammad Sajid Ali</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">16</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:80%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">47</span></td>
+        <td class="cell-name"><span>Innama</span></td>
+        <td class="cell-father"><span>Ashraf khan</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">16</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:80%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">47</span></td>
+        <td class="cell-name"><span>Rehnuma khan</span></td>
+        <td class="cell-father"><span>Sadaqat khan</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">16</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:80%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">47</span></td>
+        <td class="cell-name"><span>Anjum Arab</span></td>
+        <td class="cell-father"><span>Mohammed Mustafa</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">16</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:80%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">47</span></td>
+        <td class="cell-name"><span>Mehjabeen</span></td>
+        <td class="cell-father"><span>Shaikh Abfullah</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">16</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:80%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">47</span></td>
+        <td class="cell-name"><span>Hajra sultana</span></td>
+        <td class="cell-father"><span>Mohammed abdul aziz</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">16</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:80%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">47</span></td>
+        <td class="cell-name"><span>Shakira</span></td>
+        <td class="cell-father"><span>Md masood</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">16</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:80%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">54</span></td>
+        <td class="cell-name"><span>Momina shaikh</span></td>
+        <td class="cell-father"><span>Muhammad tahir</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">15</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:75%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">54</span></td>
+        <td class="cell-name"><span>Umaima Binte Arbaaz  Al makkawi</span></td>
+        <td class="cell-father"><span>Arbaaz bin Siddiq Al makkawi</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">15</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:75%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">54</span></td>
+        <td class="cell-name"><span>Umme Aatif</span></td>
+        <td class="cell-father"><span>Yousuf Khan</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">15</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:75%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">54</span></td>
+        <td class="cell-name"><span>Sofiya</span></td>
+        <td class="cell-father"><span>Yunus pathan</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">15</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:75%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">58</span></td>
+        <td class="cell-name"><span>Mubeen Fathima</span></td>
+        <td class="cell-father"><span>Ismail Qureshi</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">13</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:65%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">58</span></td>
+        <td class="cell-name"><span>Muskan Bano</span></td>
+        <td class="cell-father"><span>Shokat Ali</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">13</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:65%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">58</span></td>
+        <td class="cell-name"><span>Afifa Mohammed Husain Shaikh</span></td>
+        <td class="cell-father"><span>Mohammed Husain Shaikh</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">13</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:65%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">58</span></td>
+        <td class="cell-name"><span>Aseema Begum</span></td>
+        <td class="cell-father"><span>Syed Mohi Uddin</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">13</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:65%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">58</span></td>
+        <td class="cell-name"><span>Sana Shaikh</span></td>
+        <td class="cell-father"><span>Yunus</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">13</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:65%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">63</span></td>
+        <td class="cell-name"><span>Fatima yasmeen sada</span></td>
+        <td class="cell-father"><span>Mohammed ghouse   sada</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">12</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:60%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">63</span></td>
+        <td class="cell-name"><span>Arfi</span></td>
+        <td class="cell-father"><span>Saeed</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">12</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:60%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">65</span></td>
+        <td class="cell-name"><span>Eram maksud</span></td>
+        <td class="cell-father"><span>Maksud Alam</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">11</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:55%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">65</span></td>
+        <td class="cell-name"><span>Rukhsar Quraishi</span></td>
+        <td class="cell-father"><span>Late Naseem Quraishi</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">11</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:55%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">65</span></td>
+        <td class="cell-name"><span>Shanaya Noor</span></td>
+        <td class="cell-father"><span>Raisuddin</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">11</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:55%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">65</span></td>
+        <td class="cell-name"><span>Al Zaheen</span></td>
+        <td class="cell-father"><span>Mohamed Sikander Ali</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">11</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:55%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">69</span></td>
+        <td class="cell-name"><span>Mubeen fatima</span></td>
+        <td class="cell-father"><span>Mohammad Abdul Jabbar</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">10</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:50%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">69</span></td>
+        <td class="cell-name"><span>Nazhat Qureshi</span></td>
+        <td class="cell-father"><span>Mo Akram qureshi</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">10</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:50%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">71</span></td>
+        <td class="cell-name"><span>Afreen Khan</span></td>
+        <td class="cell-father"><span>Amanullah khan</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">9</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:45%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">71</span></td>
+        <td class="cell-name"><span>Farhat ahmed</span></td>
+        <td class="cell-father"><span>Mumtaz ahmed</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">9</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:45%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">73</span></td>
+        <td class="cell-name"><span>Alveera Altaf Muchale</span></td>
+        <td class="cell-father"><span>Altaf md sharif muchale</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">8</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:40%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">74</span></td>
+        <td class="cell-name"><span>Afreen khan</span></td>
+        <td class="cell-father"><span>Amanullah khan</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">7</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:35%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">75</span></td>
+        <td class="cell-name"><span>Ariba Afroz</span></td>
+        <td class="cell-father"><span>Md Afroz Alam</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">6</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:30%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">76</span></td>
+        <td class="cell-name"><span>Ayesha khatoon</span></td>
+        <td class="cell-father"><span>Sunil verma</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">5</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:25%"></div></div>
+          </div>
+        </td>
+      </tr>
+      <tr class="">
+        <td class="cell-rank"><span class="rank-badge">77</span></td>
+        <td class="cell-name"><span>Fiza</span></td>
+        <td class="cell-father"><span>Mohd Rashid</span></td>
+        <td class="cell-score">
+          <div class="score-wrap">
+            <span class="score-num">4</span><span class="score-max">/20</span>
+            <div class="score-bar"><div class="score-fill" style="width:20%"></div></div>
+          </div>
+        </td>
+      </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="contact-strip">
+      <span class="label">For queries about the Seerat-e-Nabi course, contact us on WhatsApp:</span>
+      <a href="https://wa.me/919720971057" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.004 2c-5.514 0-9.997 4.478-9.997 9.997 0 1.764.462 3.489 1.34 5.007L2 22l5.13-1.345a9.96 9.96 0 0 0 4.874 1.243h.005c5.514 0 9.996-4.478 9.996-9.997 0-2.671-1.04-5.183-2.928-7.071A9.935 9.935 0 0 0 12.004 2zm5.834 15.826c-.734.812-1.85 1.284-3.008 1.284h-.005a8.34 8.34 0 0 1-4.24-1.163l-.304-.18-3.045.799.813-2.968-.198-.305a8.318 8.318 0 0 1-1.279-4.446c0-4.6 3.75-8.348 8.353-8.348 2.232 0 4.328.87 5.905 2.448a8.29 8.29 0 0 1 2.443 5.905c0 3.36-1.883 5.02-2.435 5.474z"/></svg>
+        +91 97209 71057
+      </a>
+    </div>
+
+    <footer class="note">Markaz Ibn Abbas &middot; Arabic Language &amp; Islamic Studies &middot; Seerat-e-Nabi Course</footer>
+  </div>
+</body>
+</html>

@@ -3,1134 +3,1086 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Seerat-e-Nabi Course &mdash; Weekly Quiz 1 Result | Markaz Ibn Abbas</title>
+<title>Markaz Ibn Abbas | Arabic Language & Islamic Studies</title>
+<meta name="description" content="Markaz Ibn Abbas — Online Arabic Language, Quranic Studies & Islamic Studies courses via Zoom.">
+
+<!-- ============================================================
+     MARKAZ IBN ABBAS — WEBSITE
+     Single-file HTML/CSS/JS. Edit sections marked "EDIT HERE".
+     ============================================================ -->
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=EB+Garamond:wght@400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Jost:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-  :root {
-    --parchment: #f4ead2;
-    --parchment-deep: #e9d9b3;
-    --cream: #faf3e2;
-    --maroon: #7a2b1d;
-    --maroon-deep: #5c1f14;
-    --gold: #b8862f;
-    --gold-light: #d4a94f;
-    --brown: #5a3c22;
-    --ink: #3a2a1c;
-    --line: #d9c294;
+  :root{
+    --deep-green: #0F3B2E;
+    --deep-green-2:#0A2B21;
+    --saffron: #EF9410;
+    --saffron-light:#FBBB55;
+    --copper: #C85A1E;
+    --maroon: #6D1422;
+    --ivory: #FCE9CF;
+    --ivory-white:#FFFCF6;
+    --ink:#1B2420;
+    --radius: 18px;
+    --shadow: 0 14px 34px rgba(15,59,46,0.18);
+    --shadow-sm: 0 6px 16px rgba(15,59,46,0.12);
+    --font-display:'Cinzel', serif;
+    --font-heading:'Jost', sans-serif;
+    --font-body:'Jost', sans-serif;
+    --font-arabic:'Cairo', sans-serif;
   }
 
-  * { box-sizing: border-box; }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--ivory-white);
+    color:var(--ink);
+    font-family:var(--font-body);
+    line-height:1.7;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2{
+    font-family:var(--font-display);
+    font-weight:700;
+    letter-spacing:.015em;
+    margin:0 0 .4em 0;
+    color:var(--deep-green);
+  }
+  h3,h4{
+    font-family:var(--font-heading);
+    font-weight:700;
+    margin:0 0 .4em 0;
+    color:var(--deep-green);
+  }
+  .arabic-text{font-family:var(--font-arabic);}
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  ul{margin:0; padding:0; list-style:none;}
+  section{padding:80px 6vw;}
+  .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:.78rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--copper);
+    font-weight:700;
+    margin-bottom:14px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:22px; height:2px;
+    background:var(--copper);
+    display:inline-block;
+  }
+  .section-head{max-width:720px; margin:0 auto 48px auto; text-align:center;}
+  .section-head h2{font-size:clamp(1.8rem,3.2vw,2.6rem);}
+  .section-head p{color:#4a5a53; font-size:1.02rem;}
 
-  body {
-    margin: 0;
-    background: var(--parchment);
+  /* ===== Geometric divider (signature motif) ===== */
+  .lattice-divider{
+    height:34px;
+    width:100%;
     background-image:
-      radial-gradient(circle at 15% 8%, rgba(184,134,47,0.10), transparent 45%),
-      radial-gradient(circle at 90% 90%, rgba(122,43,29,0.08), transparent 50%);
-    font-family: 'EB Garamond', serif;
-    color: var(--ink);
-    padding: 28px 16px 48px;
+      linear-gradient(45deg, var(--saffron) 25%, transparent 25%, transparent 75%, var(--saffron) 75%),
+      linear-gradient(45deg, var(--saffron) 25%, transparent 25%, transparent 75%, var(--saffron) 75%);
+    background-size: 24px 24px;
+    background-position: 0 0, 12px 12px;
+    opacity:.85;
   }
 
-  .sheet {
-    max-width: 980px;
-    margin: 0 auto;
-    background: var(--cream);
-    border: 1px solid var(--line);
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 18px 45px rgba(90,60,25,0.18), 0 2px 8px rgba(90,60,25,0.10);
+  /* ===== HEADER (matches logo's ivory background) ===== */
+  header{
+    position:sticky; top:0; z-index:1000;
+    background:var(--ivory);
+    border-bottom:3px solid var(--saffron);
+    box-shadow:0 2px 14px rgba(109,20,34,.08);
   }
+  .nav-wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:8px 6vw;
+    max-width:1400px; margin:0 auto;
+  }
+  .brand{display:flex; align-items:center; gap:14px;}
+  .brand img{height:58px; width:auto;}
+  .brand span{
+    font-family:var(--font-display);
+    color:var(--deep-green);
+    font-size:1.3rem;
+    font-weight:700;
+    letter-spacing:.03em;
+  }
+  nav.links{display:flex; gap:30px;}
+  nav.links a{
+    font-family:var(--font-heading);
+    color:var(--deep-green);
+    font-weight:600;
+    font-size:.95rem;
+    position:relative;
+    padding:6px 0;
+    transition:color .2s;
+  }
+  nav.links a:hover{color:var(--copper);}
+  nav.links a::after{
+    content:"";
+    position:absolute; left:0; bottom:0;
+    width:0; height:2px; background:var(--saffron);
+    transition:width .25s;
+  }
+  nav.links a:hover::after{width:100%;}
+  .nav-toggle{display:none; background:none; border:none; color:var(--deep-green); font-size:1.6rem; cursor:pointer;}
 
-  .banner-wrap {
-    position: relative;
-    line-height: 0;
-  }
-  .banner-wrap img {
-    width: 100%;
-    display: block;
-  }
-
-  .meta-strip {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 18px 30px;
-    background: linear-gradient(90deg, var(--maroon-deep), var(--maroon) 55%, var(--maroon-deep));
-    color: var(--parchment);
-  }
-  .meta-strip .title {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 700;
-    font-size: 26px;
-    letter-spacing: 0.03em;
-  }
-  .meta-strip .title small {
-    display: block;
-    font-family: 'EB Garamond', serif;
-    font-weight: 500;
-    font-size: 13px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--gold-light);
-    margin-bottom: 2px;
-  }
-  .meta-strip .date {
-    font-size: 15px;
-    color: var(--parchment);
-    background: rgba(0,0,0,0.15);
-    border: 1px solid rgba(212,169,79,0.5);
-    padding: 6px 16px;
-    border-radius: 999px;
-    letter-spacing: 0.03em;
-  }
-
-  .stats-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--line);
-    border-bottom: 1px solid var(--line);
-  }
-  .stat {
-    background: var(--parchment);
-    padding: 16px 10px;
-    text-align: center;
-  }
-  .stat .num {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 700;
-    font-size: 28px;
-    color: var(--maroon);
-  }
-  .stat .lbl {
-    font-size: 12.5px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--brown);
-    opacity: 0.85;
-  }
-
-  .table-area {
-    padding: 26px 22px 10px;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 16px;
-  }
-
-  thead th {
-    text-align: left;
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 700;
-    font-size: 15px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--cream);
-    background: var(--maroon-deep);
-    padding: 12px 14px;
-  }
-  thead th:first-child { border-radius: 8px 0 0 8px; text-align: center; }
-  thead th:last-child { border-radius: 0 8px 8px 0; }
-
-  tbody tr {
-    border-bottom: 1px solid var(--line);
-  }
-  tbody tr:nth-child(even) { background: rgba(184,134,47,0.06); }
-  tbody tr:hover { background: rgba(184,134,47,0.14); }
-
-  tbody tr.r1 { background: rgba(184,134,47,0.22); }
-  tbody tr.r1:nth-child(even) { background: rgba(184,134,47,0.26); }
-  tbody tr.r2 { background: rgba(184,134,47,0.10); }
-
-  td { padding: 11px 14px; vertical-align: middle; }
-
-  .cell-rank { text-align: center; width: 64px; }
-  .rank-badge {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 34px;
-    height: 34px;
-    padding: 0 6px;
-    border-radius: 50%;
-    background: var(--brown);
-    color: var(--cream);
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 700;
-    font-size: 16px;
-  }
-  tr.r1 .rank-badge { background: linear-gradient(160deg, var(--gold-light), var(--gold) 70%); color: var(--maroon-deep); box-shadow: 0 0 0 2px rgba(122,43,29,0.25); }
-
-  .cell-name { font-weight: 600; color: var(--ink); width: 30%; }
-  .cell-father { color: var(--brown); width: 34%; }
-  .ar-text { font-family: 'Amiri', serif; font-size: 17px; }
-
-  .cell-score { width: 170px; }
-  .score-wrap { display: flex; align-items: baseline; gap: 3px; flex-wrap: wrap; }
-  .score-num { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 19px; color: var(--maroon); }
-  .score-max { font-size: 12.5px; color: var(--brown); opacity: 0.75; margin-right: 8px; }
-  .score-bar { flex: 1 1 70px; height: 6px; border-radius: 4px; background: rgba(90,60,25,0.14); overflow: hidden; margin-left: 2px; align-self: center; min-width: 60px; }
-  .score-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--gold), var(--maroon)); }
-
-  .contact-strip {
-    margin: 22px 22px 26px;
-    padding: 18px 22px;
-    background: var(--parchment-deep);
-    border: 1px solid var(--line);
-    border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
-    flex-wrap: wrap;
-    text-align: center;
-  }
-  .contact-strip .label {
-    font-size: 14.5px;
-    color: var(--brown);
-  }
-  .contact-strip a {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: linear-gradient(160deg, #2fae5a, #1e8a45);
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 16px;
-    padding: 9px 20px;
-    border-radius: 999px;
-    box-shadow: 0 4px 12px rgba(30,138,69,0.35);
-  }
-  .contact-strip a svg { width: 18px; height: 18px; fill: #fff; }
-
-  footer.note {
-    text-align: center;
-    font-size: 12.5px;
-    color: var(--brown);
-    opacity: 0.75;
-    padding-bottom: 26px;
-  }
-
-  @media (max-width: 640px) {
-    .table-area { padding: 18px 10px 6px; }
-    table, thead, tbody, th, td, tr { display: block; }
-    thead { display: none; }
-    tbody tr {
-      background: var(--cream) !important;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      margin-bottom: 10px;
-      padding: 10px 12px;
-      position: relative;
+  @media (max-width: 880px){
+    nav.links{
+      position:absolute; top:100%; left:0; right:0;
+      background:var(--ivory);
+      flex-direction:column; gap:0;
+      max-height:0; overflow:hidden;
+      transition:max-height .3s ease;
+      border-bottom:3px solid var(--saffron);
     }
-    tbody tr.r1 { background: rgba(184,134,47,0.18) !important; border-color: var(--gold); }
-    td { padding: 4px 0; border: none; }
-    .cell-rank { position: absolute; top: 10px; right: 12px; width: auto; }
-    .cell-name { padding-right: 50px; font-size: 17px; }
-    .cell-father::before { content: "Father: "; font-size: 12px; opacity: 0.7; }
-    .cell-score { width: auto; margin-top: 4px; }
-    .meta-strip { padding: 14px 18px; }
-    .stats-row { grid-template-columns: repeat(3, 1fr); }
-    .stat .num { font-size: 22px; }
-    .stat .lbl { font-size: 10.5px; }
+    nav.links.open{max-height:400px;}
+    nav.links a{padding:14px 6vw; border-top:1px solid rgba(109,20,34,.1);}
+    .nav-toggle{display:block;}
+  }
+
+  /* ===== HERO / SLIDESHOW ===== */
+  .hero{
+    position:relative;
+    background:linear-gradient(180deg, var(--deep-green) 0%, var(--deep-green-2) 100%);
+    padding:52px 6vw 70px 6vw;
+    overflow:hidden;
+  }
+  .hero-pattern{
+    position:absolute; inset:0; pointer-events:none;
+    opacity:.08;
+    background-image:
+      radial-gradient(circle at 10px 10px, var(--saffron) 1.6px, transparent 1.6px),
+      radial-gradient(circle at 30px 30px, var(--saffron) 1.6px, transparent 1.6px);
+    background-size:40px 40px;
+  }
+  .hero-inner{
+    position:relative; z-index:2;
+    max-width:1200px; margin:0 auto;
+    text-align:center;
+  }
+  .hero-inner .eyebrow{color:var(--saffron-light);}
+  .hero-inner .eyebrow::before{background:var(--saffron-light);}
+  .hero-inner h1{
+    color:var(--ivory-white);
+    font-size:clamp(1.9rem,4vw,3.1rem);
+    max-width:820px; margin:0 auto 10px auto;
+  }
+  .hero-inner .sub{
+    color:#cfe3da;
+    max-width:640px; margin:0 auto 34px auto;
+    font-size:1.05rem;
+  }
+
+  .slideshow{
+    position:relative;
+    max-width:920px;
+    margin:0 auto;
+    border-radius:var(--radius);
+    overflow:hidden;
+    box-shadow: 0 24px 60px rgba(0,0,0,.35);
+    background:var(--ivory);
+  }
+  .slides{
+    display:flex;
+    transition: transform .6s cubic-bezier(.65,0,.35,1);
+  }
+  .slide{
+    min-width:100%;
+    display:flex;
+    align-items:stretch;
+  }
+  .slide img{width:100%; height:100%; object-fit:cover; aspect-ratio:1.6/2;}
+  .slide.placeholder-slide{
+    background:linear-gradient(160deg, var(--deep-green) 0%, #1a5440 60%, var(--maroon) 130%);
+    color:var(--ivory-white);
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center;
+    padding:60px 40px;
+    aspect-ratio:1.6/2;
+    width:100%;
+    position:relative;
+  }
+  .placeholder-slide .badge{
+    background:var(--saffron);
+    color:var(--deep-green-2);
+    font-weight:800;
+    padding:8px 22px;
+    border-radius:999px;
+    font-size:.85rem;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    margin-bottom:22px;
+  }
+  .placeholder-slide h3{font-family:var(--font-display); color:var(--ivory-white); font-size:clamp(1.6rem,3vw,2.3rem); margin-bottom:.3em;}
+  .placeholder-slide .arabic{font-family:var(--font-arabic); font-size:1.4rem; color:var(--saffron-light); margin-bottom:18px;}
+  .placeholder-slide p{color:#d9e8e0; max-width:420px;}
+  .placeholder-slide .soon{
+    margin-top:26px;
+    font-family:var(--font-display);
+    font-style:normal;
+    font-size:1.2rem;
+    letter-spacing:.04em;
+    color:var(--saffron-light);
+  }
+
+  .slide-nav{
+    position:absolute; top:50%; transform:translateY(-50%);
+    background:rgba(15,59,46,.55);
+    color:var(--ivory-white);
+    border:none;
+    width:42px; height:42px;
+    border-radius:50%;
+    font-size:1.3rem;
+    cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+    transition:background .2s;
+    z-index:5;
+  }
+  .slide-nav:hover{background:var(--saffron); color:var(--deep-green-2);}
+  .slide-prev{left:14px;}
+  .slide-next{right:14px;}
+
+  .slide-dots{
+    display:flex; justify-content:center; gap:9px;
+    margin-top:18px;
+  }
+  .slide-dots button{
+    width:10px; height:10px; border-radius:50%;
+    border:2px solid var(--saffron-light);
+    background:transparent;
+    cursor:pointer;
+    padding:0;
+  }
+  .slide-dots button.active{background:var(--saffron-light);}
+
+  .cta-row{
+    display:flex; flex-wrap:wrap; justify-content:center; gap:16px;
+    margin-top:36px;
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:14px 30px;
+    border-radius:999px;
+    font-weight:700;
+    font-size:1rem;
+    cursor:pointer;
+    border:2px solid transparent;
+    transition:transform .2s, box-shadow .2s;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{
+    background:var(--saffron);
+    color:var(--deep-green-2);
+    box-shadow:0 10px 26px rgba(239,148,16,.35);
+  }
+  .btn-primary:hover{box-shadow:0 14px 32px rgba(239,148,16,.5);}
+  .btn-outline{
+    background:transparent;
+    border-color:var(--ivory);
+    color:var(--ivory-white);
+  }
+  .btn-outline:hover{background:rgba(255,255,255,.08);}
+
+  /* ===== SOCIAL BAR ===== */
+  .social-bar{
+    background:var(--ivory);
+    padding:22px 6vw;
+    display:flex; align-items:center; justify-content:center; gap:26px;
+    flex-wrap:wrap;
+    border-bottom:1px solid rgba(109,20,34,.12);
+  }
+  .social-bar a{
+    display:flex; align-items:center; gap:10px;
+    font-weight:700;
+    color:var(--deep-green);
+    padding:10px 18px;
+    border-radius:999px;
+    background:var(--ivory-white);
+    box-shadow:var(--shadow-sm);
+    transition:transform .2s, color .2s;
+  }
+  .social-bar a:hover{transform:translateY(-2px); color:var(--copper);}
+  .social-bar svg{width:20px; height:20px; fill:currentColor;}
+
+  /* ===== COURSES ===== */
+  .courses-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:26px;
+    max-width:1200px; margin:0 auto;
+  }
+  .course-card{
+    background:var(--ivory-white);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow-sm);
+    overflow:hidden;
+    display:flex; flex-direction:column;
+    border-top:6px solid var(--saffron);
+    transition:transform .25s, box-shadow .25s;
+  }
+  .course-card:hover{transform:translateY(-6px); box-shadow:var(--shadow);}
+  .course-card.level-2{border-top-color:var(--copper);}
+  .course-card.level-3{border-top-color:var(--maroon);}
+  .course-card .card-top{
+    padding:22px 24px 0 24px;
+    display:flex; justify-content:space-between; align-items:flex-start;
+  }
+  .tag{
+    background:var(--ivory);
+    color:var(--maroon);
+    font-size:.72rem;
+    font-weight:800;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    padding:5px 12px;
+    border-radius:999px;
+  }
+  .course-card h3{font-size:1.3rem; padding:0 24px; margin-top:14px;}
+  .course-card .meta{
+    padding:0 24px;
+    color:#556b62;
+    font-size:.92rem;
+    display:flex; flex-direction:column; gap:6px;
+    margin-bottom:18px;
+  }
+  .course-card .meta span{display:flex; gap:8px; align-items:center;}
+  .course-card .fee-row{
+    margin-top:auto;
+    padding:16px 24px;
+    background:var(--ivory);
+    display:flex; justify-content:space-between; align-items:center;
+  }
+  .course-card .fee{font-weight:800; color:var(--deep-green);}
+  .course-card .fee small{display:block; font-weight:500; color:#6b7d75; font-size:.72rem;}
+  .mini-btn{
+    background:var(--deep-green);
+    color:var(--ivory-white);
+    padding:9px 18px;
+    border-radius:999px;
+    font-size:.85rem;
+    font-weight:700;
+  }
+  .mini-btn:hover{background:var(--maroon);}
+
+  /* ===== SEERAT SECTION ===== */
+  .seerat-section{
+    background:var(--deep-green);
+    color:var(--ivory-white);
+  }
+  .seerat-section .section-head h2{color:var(--ivory-white);}
+  .seerat-section .section-head p{color:#cfe3da;}
+  .seerat-section .eyebrow{color:var(--saffron-light);}
+  .seerat-section .eyebrow::before{background:var(--saffron-light);}
+
+  .seerat-tabs{
+    display:flex; flex-wrap:wrap; justify-content:center; gap:10px;
+    max-width:900px; margin:0 auto 34px auto;
+  }
+  .seerat-tab-btn{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.18);
+    color:var(--ivory-white);
+    padding:12px 22px;
+    border-radius:999px;
+    font-weight:700;
+    font-size:.92rem;
+    cursor:pointer;
+    transition:.2s;
+  }
+  .seerat-tab-btn.active, .seerat-tab-btn:hover{
+    background:var(--saffron);
+    color:var(--deep-green-2);
+    border-color:var(--saffron);
+  }
+  .seerat-panels{max-width:820px; margin:0 auto;}
+  .seerat-panel{display:none;}
+  .seerat-panel.active{display:block; animation:fadein .35s ease;}
+  @keyframes fadein{from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:translateY(0);}}
+
+  .seerat-card{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:var(--radius);
+    padding:32px;
+    text-align:center;
+  }
+  .seerat-card h3{color:var(--ivory-white);}
+  .seerat-card p{color:#cfe3da; margin-bottom:22px;}
+  .quiz-schedule{
+    display:inline-flex; gap:18px; flex-wrap:wrap; justify-content:center;
+    margin-bottom:22px;
+    font-size:.9rem;
+    color:var(--saffron-light);
+    font-weight:700;
+  }
+  .quiz-list{
+    display:flex; flex-direction:column; gap:10px;
+    margin-top:10px;
+    text-align:left;
+  }
+  .quiz-list a{
+    display:flex; justify-content:space-between; align-items:center;
+    background:rgba(255,255,255,.07);
+    padding:14px 20px;
+    border-radius:12px;
+    font-weight:600;
+    transition:background .2s;
+  }
+  .quiz-list a:hover{background:var(--saffron); color:var(--deep-green-2);}
+  .quiz-list .arrow{opacity:.7;}
+
+  /* ===== SPECIAL DUROOS ===== */
+  .duroos-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+    gap:26px;
+    max-width:1200px; margin:0 auto;
+  }
+  .duroos-card{
+    background:var(--ivory-white);
+    border-radius:var(--radius);
+    overflow:hidden;
+    box-shadow:var(--shadow-sm);
+    transition:transform .25s, box-shadow .25s;
+  }
+  .duroos-card:hover{transform:translateY(-5px); box-shadow:var(--shadow);}
+  .duroos-thumb{
+    position:relative;
+    aspect-ratio:16/9;
+    background:var(--ink);
+    overflow:hidden;
+  }
+  .duroos-thumb img{width:100%; height:100%; object-fit:cover;}
+  .duroos-thumb .play{
+    position:absolute; inset:0;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .duroos-thumb .play span{
+    width:60px; height:60px; border-radius:50%;
+    background:rgba(239,148,16,.92);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 8px 22px rgba(0,0,0,.35);
+  }
+  .duroos-thumb .play svg{width:22px; height:22px; fill:var(--deep-green-2); margin-left:3px;}
+  .duroos-card .cap{padding:16px 20px;}
+  .duroos-card h4{font-size:1.05rem; margin:0;}
+
+  .duroos-subhead{
+    max-width:1200px; margin:56px auto 26px auto;
+    display:flex; align-items:center; gap:16px;
+  }
+  .duroos-subhead h3{margin:0; font-size:1.15rem; white-space:nowrap;}
+  .duroos-subhead .rule{flex:1; height:1px; background:linear-gradient(90deg, var(--saffron), transparent);}
+
+  .playlist-card .duroos-thumb{
+    background:linear-gradient(150deg, var(--deep-green) 0%, var(--copper) 130%);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .playlist-card .duroos-thumb .badge-icon{
+    width:64px; height:64px; border-radius:50%;
+    background:rgba(255,255,255,.12);
+    border:2px solid var(--saffron-light);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .playlist-card .duroos-thumb .badge-icon svg{width:26px; height:26px; fill:var(--ivory-white);}
+  .playlist-card.coming-soon .duroos-thumb{
+    background:linear-gradient(150deg, #8a8f8c 0%, #565b58 130%);
+  }
+  .coming-soon-tag{
+    position:absolute; top:12px; right:12px;
+    background:var(--saffron);
+    color:var(--deep-green-2);
+    font-size:.68rem;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    padding:5px 12px;
+    border-radius:999px;
+  }
+
+  /* ===== FOOTER ===== */
+  footer{
+    background:var(--deep-green-2);
+    color:#cfe3da;
+    padding:54px 6vw 26px 6vw;
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr;
+    gap:36px;
+    max-width:1200px; margin:0 auto 34px auto;
+  }
+  .footer-grid h4{color:var(--ivory-white); font-size:1rem; margin-bottom:14px;}
+  .footer-brand{display:flex; align-items:center; gap:10px; margin-bottom:14px;}
+  .footer-brand img{height:44px; border-radius:10px;}
+  .footer-brand span{font-family:var(--font-display); color:var(--ivory-white); font-size:1.15rem; font-weight:700;}
+  footer ul li{margin-bottom:10px;}
+  footer a:hover{color:var(--saffron-light);}
+  .footer-bottom{
+    max-width:1200px; margin:0 auto;
+    border-top:1px solid rgba(255,255,255,.12);
+    padding-top:20px;
+    font-size:.85rem;
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+    color:#9fb5ac;
+  }
+  @media (max-width:760px){
+    .footer-grid{grid-template-columns:1fr;}
   }
 </style>
 </head>
 <body>
-  <div class="sheet">
-    <div class="banner-wrap">
-      <img src="banner.png" alt="Seerat-e-Nabi Course - Weekly Quiz 1">
-    </div>
 
-    <div class="meta-strip">
-      <div class="title"><small>Markaz Ibn Abbas</small>Weekly Quiz 1 &mdash; Result</div>
-      <div class="date">05 July 2026</div>
+<!-- ============================================================
+     HEADER / NAVIGATION
+     ============================================================ -->
+<header>
+  <div class="nav-wrap">
+    <div class="brand">
+      <img src="assets/logo.png" alt="Markaz Ibn Abbas logo">
+      <span>Markaz Ibn Abbas</span>
     </div>
-
-    <div class="stats-row">
-      <div class="stat"><div class="num">77</div><div class="lbl">Students</div></div>
-      <div class="stat"><div class="num">7</div><div class="lbl">Scored 20/20</div></div>
-      <div class="stat"><div class="num">15.8</div><div class="lbl">Average Score</div></div>
-    </div>
-
-    <div class="table-area">
-      <table>
-        <thead>
-          <tr>
-            <th>Rank</th>
-            <th>Name</th>
-            <th>Father's Name</th>
-            <th>Score</th>
-          </tr>
-        </thead>
-        <tbody>
-      <tr class="r1">
-        <td class="cell-rank"><span class="rank-badge">1</span></td>
-        <td class="cell-name"><span>Falak</span></td>
-        <td class="cell-father"><span>Farid</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">20</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:100%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r1">
-        <td class="cell-rank"><span class="rank-badge">1</span></td>
-        <td class="cell-name"><span>Nusrath jabeen</span></td>
-        <td class="cell-father"><span>Mohammad kareem</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">20</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:100%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r1">
-        <td class="cell-rank"><span class="rank-badge">1</span></td>
-        <td class="cell-name"><span>Uzma Parvez</span></td>
-        <td class="cell-father"><span>Parvez Alam</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">20</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:100%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r1">
-        <td class="cell-rank"><span class="rank-badge">1</span></td>
-        <td class="cell-name"><span>Sahanaj Khatun</span></td>
-        <td class="cell-father"><span>Md.Abul Hossain</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">20</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:100%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r1">
-        <td class="cell-rank"><span class="rank-badge">1</span></td>
-        <td class="cell-name"><span>Sana Farheen</span></td>
-        <td class="cell-father"><span>Syed Gaziuddin</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">20</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:100%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r1">
-        <td class="cell-rank"><span class="rank-badge">1</span></td>
-        <td class="cell-name"><span>Amena fathima</span></td>
-        <td class="cell-father"><span>Syed Ahmed ali</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">20</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:100%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r1">
-        <td class="cell-rank"><span class="rank-badge">1</span></td>
-        <td class="cell-name"><span>Aasmeen aameen</span></td>
-        <td class="cell-father"><span>Aameen khan</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">20</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:100%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r2">
-        <td class="cell-rank"><span class="rank-badge">8</span></td>
-        <td class="cell-name"><span>Naziya binte Mohammad</span></td>
-        <td class="cell-father"><span>Mohammad Subhan Sharif</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">19</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:95%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r2">
-        <td class="cell-rank"><span class="rank-badge">8</span></td>
-        <td class="cell-name"><span>Saba Afreen</span></td>
-        <td class="cell-father"><span>Dr  Moh. Nazim Hussain</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">19</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:95%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r2">
-        <td class="cell-rank"><span class="rank-badge">8</span></td>
-        <td class="cell-name"><span>Saba khanam</span></td>
-        <td class="cell-father"><span>Khursheed Ali khan</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">19</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:95%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r2">
-        <td class="cell-rank"><span class="rank-badge">8</span></td>
-        <td class="cell-name"><span>Haya fatima</span></td>
-        <td class="cell-father"><span>Ahmed khaleeq</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">19</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:95%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r2">
-        <td class="cell-rank"><span class="rank-badge">8</span></td>
-        <td class="cell-name"><span>NIDA</span></td>
-        <td class="cell-father"><span>Sabir Hussain</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">19</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:95%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r2">
-        <td class="cell-rank"><span class="rank-badge">8</span></td>
-        <td class="cell-name"><span>Fatima khan</span></td>
-        <td class="cell-father"><span>Mohd shoeb</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">19</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:95%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r2">
-        <td class="cell-rank"><span class="rank-badge">8</span></td>
-        <td class="cell-name"><span>Ayesha firdous</span></td>
-        <td class="cell-father"><span>Krishna Naik</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">19</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:95%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r2">
-        <td class="cell-rank"><span class="rank-badge">8</span></td>
-        <td class="cell-name"><span>Sahiba Parveen</span></td>
-        <td class="cell-father"><span>Mohd. Nasiruddin</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">19</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:95%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r2">
-        <td class="cell-rank"><span class="rank-badge">8</span></td>
-        <td class="cell-name"><span>Sabiha Firdous</span></td>
-        <td class="cell-father"><span>Md Ibrahim Qureshi</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">19</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:95%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r2">
-        <td class="cell-rank"><span class="rank-badge">8</span></td>
-        <td class="cell-name"><span>Nishath Jabeen</span></td>
-        <td class="cell-father"><span>Abdul Kareem uddin</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">19</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:95%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r2">
-        <td class="cell-rank"><span class="rank-badge">8</span></td>
-        <td class="cell-name"><span>Tarannum sayyed</span></td>
-        <td class="cell-father"><span>Iqbal sayyed</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">19</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:95%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r2">
-        <td class="cell-rank"><span class="rank-badge">8</span></td>
-        <td class="cell-name"><span>Sayeda Hafsa</span></td>
-        <td class="cell-father"><span>Mir Azmat Ali Imran</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">19</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:95%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r3">
-        <td class="cell-rank"><span class="rank-badge">20</span></td>
-        <td class="cell-name"><span>Reshma</span></td>
-        <td class="cell-father"><span>Ansarullah</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">18</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:90%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r3">
-        <td class="cell-rank"><span class="rank-badge">20</span></td>
-        <td class="cell-name"><span>Fatima</span></td>
-        <td class="cell-father"><span>Mahmood kazia</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">18</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:90%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r3">
-        <td class="cell-rank"><span class="rank-badge">20</span></td>
-        <td class="cell-name"><span>Tahira khan</span></td>
-        <td class="cell-father"><span>Abdurraheem khan</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">18</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:90%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r3">
-        <td class="cell-rank"><span class="rank-badge">20</span></td>
-        <td class="cell-name"><span>Zaheda</span></td>
-        <td class="cell-father"><span>Hashim salfi</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">18</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:90%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r3">
-        <td class="cell-rank"><span class="rank-badge">20</span></td>
-        <td class="cell-name"><span>Aaliya mohsin attar</span></td>
-        <td class="cell-father"><span>Mohsin attar</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">18</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:90%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r3">
-        <td class="cell-rank"><span class="rank-badge">20</span></td>
-        <td class="cell-name"><span dir="rtl" lang="ar" class="ar-text">بشریٰ عفاف</span></td>
-        <td class="cell-father"><span dir="rtl" lang="ar" class="ar-text">جمیل احمد</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">18</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:90%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r3">
-        <td class="cell-rank"><span class="rank-badge">20</span></td>
-        <td class="cell-name"><span>Md. Nahdia Sireen</span></td>
-        <td class="cell-father"><span>Md. Shahid Anwar</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">18</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:90%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r3">
-        <td class="cell-rank"><span class="rank-badge">20</span></td>
-        <td class="cell-name"><span>Samrin Parvin</span></td>
-        <td class="cell-father"><span>Shamim Khan</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">18</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:90%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r3">
-        <td class="cell-rank"><span class="rank-badge">20</span></td>
-        <td class="cell-name"><span>Aaisha</span></td>
-        <td class="cell-father"><span>Saeed Ahmad</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">18</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:90%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r3">
-        <td class="cell-rank"><span class="rank-badge">20</span></td>
-        <td class="cell-name"><span>Iqra Anam</span></td>
-        <td class="cell-father"><span>Zakir Shakeel</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">18</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:90%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r3">
-        <td class="cell-rank"><span class="rank-badge">20</span></td>
-        <td class="cell-name"><span>Isra</span></td>
-        <td class="cell-father"><span>sadiq</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">18</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:90%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r3">
-        <td class="cell-rank"><span class="rank-badge">20</span></td>
-        <td class="cell-name"><span>Nafisha Parveen</span></td>
-        <td class="cell-father"><span>Jafar Ansari</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">18</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:90%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r3">
-        <td class="cell-rank"><span class="rank-badge">20</span></td>
-        <td class="cell-name"><span>Aaliya binte aamin</span></td>
-        <td class="cell-father"><span>Aamin</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">18</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:90%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="r3">
-        <td class="cell-rank"><span class="rank-badge">20</span></td>
-        <td class="cell-name"><span>Arshiya Begum</span></td>
-        <td class="cell-father"><span>Mohammed Abdul Aziz</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">18</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:90%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">34</span></td>
-        <td class="cell-name"><span>Shabbu khatoon</span></td>
-        <td class="cell-father"><span>Mehdi Hasan Ansari</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">17</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:85%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">34</span></td>
-        <td class="cell-name"><span>Sana</span></td>
-        <td class="cell-father"><span>Farid</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">17</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:85%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">34</span></td>
-        <td class="cell-name"><span>Nikhat parvin</span></td>
-        <td class="cell-father"><span>Md.Aslam</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">17</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:85%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">34</span></td>
-        <td class="cell-name"><span>Mohsin khan</span></td>
-        <td class="cell-father"><span>Abdul Raheem</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">17</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:85%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">34</span></td>
-        <td class="cell-name"><span>Zainab parveen</span></td>
-        <td class="cell-father"><span>Shakeel uddin</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">17</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:85%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">34</span></td>
-        <td class="cell-name"><span>Muskan</span></td>
-        <td class="cell-father"><span>Abdul Jabbar</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">17</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:85%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">34</span></td>
-        <td class="cell-name"><span>Sarah</span></td>
-        <td class="cell-father"><span>Ali jaidi</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">17</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:85%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">34</span></td>
-        <td class="cell-name"><span>Shahida farha</span></td>
-        <td class="cell-father"><span>Allah bakash</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">17</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:85%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">34</span></td>
-        <td class="cell-name"><span>Fatma Aysha</span></td>
-        <td class="cell-father"><span>Dr Zakir Shakeel</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">17</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:85%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">34</span></td>
-        <td class="cell-name"><span>Kousar</span></td>
-        <td class="cell-father"><span>Mohd abdul qhayyum sahab</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">17</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:85%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">34</span></td>
-        <td class="cell-name"><span>Kousar</span></td>
-        <td class="cell-father"><span>Mohd abdul qhayyum sahab</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">17</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:85%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">34</span></td>
-        <td class="cell-name"><span>Raziya Dyamnal</span></td>
-        <td class="cell-father"><span>Usman Sab Dyamnal</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">17</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:85%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">34</span></td>
-        <td class="cell-name"><span>Asma begum</span></td>
-        <td class="cell-father"><span>Abdul hameed</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">17</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:85%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">47</span></td>
-        <td class="cell-name"><span>Mohammadi Begum</span></td>
-        <td class="cell-father"><span>Mohammad Sajid Ali</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">16</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:80%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">47</span></td>
-        <td class="cell-name"><span>Innama</span></td>
-        <td class="cell-father"><span>Ashraf khan</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">16</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:80%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">47</span></td>
-        <td class="cell-name"><span>Rehnuma khan</span></td>
-        <td class="cell-father"><span>Sadaqat khan</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">16</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:80%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">47</span></td>
-        <td class="cell-name"><span>Anjum Arab</span></td>
-        <td class="cell-father"><span>Mohammed Mustafa</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">16</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:80%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">47</span></td>
-        <td class="cell-name"><span>Mehjabeen</span></td>
-        <td class="cell-father"><span>Shaikh Abfullah</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">16</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:80%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">47</span></td>
-        <td class="cell-name"><span>Hajra sultana</span></td>
-        <td class="cell-father"><span>Mohammed abdul aziz</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">16</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:80%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">47</span></td>
-        <td class="cell-name"><span>Shakira</span></td>
-        <td class="cell-father"><span>Md masood</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">16</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:80%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">54</span></td>
-        <td class="cell-name"><span>Momina shaikh</span></td>
-        <td class="cell-father"><span>Muhammad tahir</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">15</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:75%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">54</span></td>
-        <td class="cell-name"><span>Umaima Binte Arbaaz  Al makkawi</span></td>
-        <td class="cell-father"><span>Arbaaz bin Siddiq Al makkawi</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">15</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:75%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">54</span></td>
-        <td class="cell-name"><span>Umme Aatif</span></td>
-        <td class="cell-father"><span>Yousuf Khan</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">15</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:75%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">54</span></td>
-        <td class="cell-name"><span>Sofiya</span></td>
-        <td class="cell-father"><span>Yunus pathan</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">15</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:75%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">58</span></td>
-        <td class="cell-name"><span>Mubeen Fathima</span></td>
-        <td class="cell-father"><span>Ismail Qureshi</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">13</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:65%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">58</span></td>
-        <td class="cell-name"><span>Muskan Bano</span></td>
-        <td class="cell-father"><span>Shokat Ali</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">13</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:65%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">58</span></td>
-        <td class="cell-name"><span>Afifa Mohammed Husain Shaikh</span></td>
-        <td class="cell-father"><span>Mohammed Husain Shaikh</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">13</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:65%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">58</span></td>
-        <td class="cell-name"><span>Aseema Begum</span></td>
-        <td class="cell-father"><span>Syed Mohi Uddin</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">13</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:65%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">58</span></td>
-        <td class="cell-name"><span>Sana Shaikh</span></td>
-        <td class="cell-father"><span>Yunus</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">13</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:65%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">63</span></td>
-        <td class="cell-name"><span>Fatima yasmeen sada</span></td>
-        <td class="cell-father"><span>Mohammed ghouse   sada</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">12</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:60%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">63</span></td>
-        <td class="cell-name"><span>Arfi</span></td>
-        <td class="cell-father"><span>Saeed</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">12</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:60%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">65</span></td>
-        <td class="cell-name"><span>Eram maksud</span></td>
-        <td class="cell-father"><span>Maksud Alam</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">11</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:55%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">65</span></td>
-        <td class="cell-name"><span>Rukhsar Quraishi</span></td>
-        <td class="cell-father"><span>Late Naseem Quraishi</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">11</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:55%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">65</span></td>
-        <td class="cell-name"><span>Shanaya Noor</span></td>
-        <td class="cell-father"><span>Raisuddin</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">11</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:55%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">65</span></td>
-        <td class="cell-name"><span>Al Zaheen</span></td>
-        <td class="cell-father"><span>Mohamed Sikander Ali</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">11</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:55%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">69</span></td>
-        <td class="cell-name"><span>Mubeen fatima</span></td>
-        <td class="cell-father"><span>Mohammad Abdul Jabbar</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">10</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:50%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">69</span></td>
-        <td class="cell-name"><span>Nazhat Qureshi</span></td>
-        <td class="cell-father"><span>Mo Akram qureshi</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">10</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:50%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">71</span></td>
-        <td class="cell-name"><span>Afreen Khan</span></td>
-        <td class="cell-father"><span>Amanullah khan</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">9</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:45%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">71</span></td>
-        <td class="cell-name"><span>Farhat ahmed</span></td>
-        <td class="cell-father"><span>Mumtaz ahmed</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">9</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:45%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">73</span></td>
-        <td class="cell-name"><span>Alveera Altaf Muchale</span></td>
-        <td class="cell-father"><span>Altaf md sharif muchale</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">8</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:40%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">74</span></td>
-        <td class="cell-name"><span>Afreen khan</span></td>
-        <td class="cell-father"><span>Amanullah khan</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">7</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:35%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">75</span></td>
-        <td class="cell-name"><span>Ariba Afroz</span></td>
-        <td class="cell-father"><span>Md Afroz Alam</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">6</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:30%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">76</span></td>
-        <td class="cell-name"><span>Ayesha khatoon</span></td>
-        <td class="cell-father"><span>Sunil verma</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">5</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:25%"></div></div>
-          </div>
-        </td>
-      </tr>
-      <tr class="">
-        <td class="cell-rank"><span class="rank-badge">77</span></td>
-        <td class="cell-name"><span>Fiza</span></td>
-        <td class="cell-father"><span>Mohd Rashid</span></td>
-        <td class="cell-score">
-          <div class="score-wrap">
-            <span class="score-num">4</span><span class="score-max">/20</span>
-            <div class="score-bar"><div class="score-fill" style="width:20%"></div></div>
-          </div>
-        </td>
-      </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="contact-strip">
-      <span class="label">For queries about the Seerat-e-Nabi course, contact us on WhatsApp:</span>
-      <a href="https://wa.me/919720971057" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.004 2c-5.514 0-9.997 4.478-9.997 9.997 0 1.764.462 3.489 1.34 5.007L2 22l5.13-1.345a9.96 9.96 0 0 0 4.874 1.243h.005c5.514 0 9.996-4.478 9.996-9.997 0-2.671-1.04-5.183-2.928-7.071A9.935 9.935 0 0 0 12.004 2zm5.834 15.826c-.734.812-1.85 1.284-3.008 1.284h-.005a8.34 8.34 0 0 1-4.24-1.163l-.304-.18-3.045.799.813-2.968-.198-.305a8.318 8.318 0 0 1-1.279-4.446c0-4.6 3.75-8.348 8.353-8.348 2.232 0 4.328.87 5.905 2.448a8.29 8.29 0 0 1 2.443 5.905c0 3.36-1.883 5.02-2.435 5.474z"/></svg>
-        +91 97209 71057
-      </a>
-    </div>
-
-    <footer class="note">Markaz Ibn Abbas &middot; Arabic Language &amp; Islamic Studies &middot; Seerat-e-Nabi Course</footer>
+    <nav class="links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#courses">Courses</a>
+      <a href="#seerat">Seerat-e-Nabi</a>
+      <a href="#duroos">Special Duroos</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
   </div>
+</header>
+
+<!-- ============================================================
+     HERO / POSTER SLIDESHOW
+     EDIT HERE: add/remove <div class="slide"> blocks below to
+     change what appears in the slideshow.
+     ============================================================ -->
+<section class="hero" id="home">
+  <div class="hero-pattern"></div>
+
+  <div class="hero-inner">
+    <div class="eyebrow">Arabic Language &amp; Islamic Studies</div>
+    <h1>Learn Quranic Arabic, Islamic Studies &amp; Seerah — Live Online via Zoom</h1>
+    <p class="sub">Structured courses for brothers and sisters, taught by qualified teachers, with weekly progress tracking and recordings available.</p>
+
+    <div class="slideshow" id="slideshow">
+      <div class="slides" id="slidesTrack">
+
+        <!-- Slide 1 -->
+        <div class="slide">
+          <img src="assets/poster-quranic-arabic.png" alt="Quranic Arabic Course - Level 1 - Registrations Open">
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+          <img src="assets/poster-duroos-book2.png" alt="Duroos ul Lughah Al Arabiyyah Book 2 - Registrations Open">
+        </div>
+
+        <!-- Slide 3 : upcoming course, no poster image yet -->
+        <div class="slide placeholder-slide">
+          <div class="badge">Will Start Soon</div>
+          <h3>Tas-heeh Tilawah</h3>
+          <div class="arabic">تصحيح تلاوة &mdash; سورة الكهف</div>
+          <p>A dedicated course to correct and beautify your recitation, focused on Surah Al-Kahf.</p>
+          <div class="soon">Details coming soon, in sha Allah</div>
+        </div>
+
+        <!-- EDIT HERE: to add a new slide, copy one of the blocks above -->
+
+      </div>
+
+      <button class="slide-nav slide-prev" onclick="changeSlide(-1)" aria-label="Previous slide">&#10094;</button>
+      <button class="slide-nav slide-next" onclick="changeSlide(1)" aria-label="Next slide">&#10095;</button>
+    </div>
+    <div class="slide-dots" id="slideDots"></div>
+
+    <div class="cta-row">
+      <a href="#courses" class="btn btn-primary">Explore Courses &amp; Register</a>
+      <!-- New / upcoming courses: WhatsApp channel join link -->
+      <a href="https://whatsapp.com/channel/0029VbBDGtIC6ZvgX7o1IO1y" class="btn btn-outline" target="_blank" rel="noopener">Join WhatsApp Channel</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SOCIAL LINKS
+     EDIT HERE: replace the three # links with your real channel URLs.
+     ============================================================ -->
+<div class="social-bar">
+  <a href="http://www.youtube.com/@MarkazIbnAbbas-n9b7u" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/></svg>
+    YouTube
+  </a>
+  <a href="#" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12Z"/></svg>
+    Facebook
+  </a>
+  <a href="#" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 2.1.26 2.7.5.7.27 1.2.6 1.7 1.1.5.5.83 1 1.1 1.7.24.6.44 1.5.5 2.7.07 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.06 1.2-.26 2.1-.5 2.7-.27.7-.6 1.2-1.1 1.7-.5.5-1 .83-1.7 1.1-.6.24-1.5.44-2.7.5-1.3.07-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.06-2.1-.26-2.7-.5-.7-.27-1.2-.6-1.7-1.1-.5-.5-.83-1-1.1-1.7-.24-.6-.44-1.5-.5-2.7C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.06-1.2.26-2.1.5-2.7.27-.7.6-1.2 1.1-1.7.5-.5 1-.83 1.7-1.1.6-.24 1.5-.44 2.7-.5C8.4 2.2 8.8 2.2 12 2.2Zm0 1.8c-3.15 0-3.52 0-4.76.07-1.02.05-1.58.22-1.95.36-.49.19-.84.42-1.2.78-.36.36-.6.71-.78 1.2-.14.37-.31.93-.36 1.95C2.87 8.48 2.87 8.85 2.87 12s0 3.52.08 4.76c.05 1.02.22 1.58.36 1.95.19.49.42.84.78 1.2.36.36.71.6 1.2.78.37.14.93.31 1.95.36 1.24.06 1.61.07 4.76.07s3.52 0 4.76-.07c1.02-.05 1.58-.22 1.95-.36.49-.19.84-.42 1.2-.78.36-.36.6-.71.78-1.2.14-.37.31-.93.36-1.95.06-1.24.07-1.61.07-4.76s0-3.52-.07-4.76c-.05-1.02-.22-1.58-.36-1.95a3.2 3.2 0 0 0-.78-1.2 3.2 3.2 0 0 0-1.2-.78c-.37-.14-.93-.31-1.95-.36C15.52 4 15.15 4 12 4Zm0 3.4a4.6 4.6 0 1 1 0 9.2 4.6 4.6 0 0 1 0-9.2Zm0 1.8a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6Zm5.85-2a1.08 1.08 0 1 1-2.16 0 1.08 1.08 0 0 1 2.16 0Z"/></svg>
+    Instagram
+  </a>
+</div>
+
+<!-- ============================================================
+     CURRENT COURSES
+     EDIT HERE: duplicate a .course-card block to add a new course.
+     ============================================================ -->
+<section id="courses">
+  <div class="section-head">
+    <div class="eyebrow">Currently Running</div>
+    <h2>Our Courses</h2>
+    <p>Live, structured, and beginner-friendly &mdash; taught by qualified teachers over Zoom.</p>
+  </div>
+
+  <div class="courses-grid">
+
+    <div class="course-card">
+      <div class="card-top">
+        <span class="tag">Level 1</span>
+        <span class="tag">Brothers &amp; Sisters</span>
+      </div>
+      <h3>Quranic Arabic Course</h3>
+      <div class="meta">
+        <span>&#128197; Starts 20 July 2026 (Mon)</span>
+        <span>&#128337; Daily, 4:45&ndash;5:30 PM IST &middot; Fri &amp; Sun off</span>
+        <span>&#128197; Duration: 4 months</span>
+        <span>&#128100; Shahrukh Salafi Hafizahullah</span>
+      </div>
+      <div class="fee-row">
+        <div class="fee">₹500/mo <small>Outside India: 50 SR/mo</small></div>
+        <a href="https://forms.gle/pqYfMePLKHdioCDX9" class="mini-btn" target="_blank" rel="noopener">Register</a>
+      </div>
+    </div>
+
+    <div class="course-card level-2">
+      <div class="card-top">
+        <span class="tag">Book 2</span>
+        <span class="tag">Brothers &amp; Sisters</span>
+      </div>
+      <h3>Duroos ul Lughah Al Arabiyyah</h3>
+      <div class="meta">
+        <span>&#128197; Starts 13 July 2026 (Mon)</span>
+        <span>&#128337; Daily, 3:00&ndash;3:50 PM IST &middot; Fri &amp; Sun off</span>
+        <span>&#128197; Duration: 3 months</span>
+        <span>&#128100; Shahrukh Salafi Hafizahullah</span>
+      </div>
+      <div class="fee-row">
+        <div class="fee">₹600/mo <small>Outside India: 50 SR/mo</small></div>
+        <a href="https://forms.gle/dJD5PykWvYS5yB5y8" class="mini-btn" target="_blank" rel="noopener">Register</a>
+      </div>
+    </div>
+
+    <div class="course-card level-3">
+      <div class="card-top">
+        <span class="tag">Level 3</span>
+        <span class="tag">Ongoing</span>
+      </div>
+      <h3>Spoken Arabic Course</h3>
+      <div class="meta">
+        <span>&#128218; Al Arabiyatu Bayna Yadaik &mdash; Book 2, Part 1</span>
+        <span>&#128197; Started 12 May 2026 &middot; Mon&ndash;Thu</span>
+        <span>&#128337; 7:30&ndash;8:15 PM IST &middot; 3 months/level</span>
+        <span>&#128100; Shaikh Yousuf Madani Hafizahullah</span>
+        <span>&#9888;&#65039; Mid-course admission requires a test</span>
+      </div>
+      <div class="fee-row">
+        <div class="fee">₹700/mo <small>Reg. fee ₹200</small></div>
+        <a href="#" class="mini-btn wa-register" data-msg="Assalamu Alaikum, I want to take admission in the Spoken Arabic Course (Level 3 - Al Arabiyatu Bayna Yadaik Book 2 Part 1). Please guide me about the admission test." target="_blank" rel="noopener">Register</a>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <div class="card-top">
+        <span class="tag">Level 1</span>
+        <span class="tag">Ongoing</span>
+      </div>
+      <h3>Arabic Grammar &mdash; Level 1</h3>
+      <div class="meta">
+        <span>&#128218; Mirqaat ul Qawaid (by Shaikh Shahrukh)</span>
+        <span>&#128337; Mon&ndash;Sat, 2:00&ndash;3:00 PM IST</span>
+        <span>&#128100; Shaikh Shahrukh Salafi Hafizahullah</span>
+        <span>&#9888;&#65039; Mid-course admission requires a test</span>
+      </div>
+      <div class="fee-row">
+        <div class="fee">Live interactive class</div>
+        <a href="#" class="mini-btn wa-register" data-msg="Assalamu Alaikum, I want to take admission in the Arabic Grammar Course - Level 1 (Mirqaat ul Qawaid). Please guide me about the admission test." target="_blank" rel="noopener">Register</a>
+      </div>
+    </div>
+
+    <div class="course-card level-2">
+      <div class="card-top">
+        <span class="tag">Level 2</span>
+        <span class="tag">Ongoing</span>
+      </div>
+      <h3>Arabic Grammar &mdash; Level 2</h3>
+      <div class="meta">
+        <span>&#128218; Mirqaat ul Qawaid (by Shaikh Shahrukh)</span>
+        <span>&#128337; Mon&ndash;Sat, 8:15&ndash;9:00 PM IST</span>
+        <span>&#128100; Shaikh Shahrukh Salafi Hafizahullah</span>
+        <span>&#9888;&#65039; Mid-course admission requires a test</span>
+      </div>
+      <div class="fee-row">
+        <div class="fee">Live interactive class</div>
+        <a href="#" class="mini-btn wa-register" data-msg="Assalamu Alaikum, I want to take admission in the Arabic Grammar Course - Level 2 (Mirqaat ul Qawaid). Please guide me about the admission test." target="_blank" rel="noopener">Register</a>
+      </div>
+    </div>
+
+    <div class="course-card level-3">
+      <div class="card-top">
+        <span class="tag">Level 3</span>
+        <span class="tag">Ongoing</span>
+      </div>
+      <h3>Arabic Grammar &mdash; Level 3</h3>
+      <div class="meta">
+        <span>&#128218; Mirqaat ul Qawaid (by Shaikh Shahrukh)</span>
+        <span>&#128337; Mon&ndash;Sat, 9:00&ndash;10:00 PM IST</span>
+        <span>&#128100; Shaikh Shahrukh Salafi Hafizahullah</span>
+        <span>&#9888;&#65039; Mid-course admission requires a test</span>
+      </div>
+      <div class="fee-row">
+        <div class="fee">Live interactive class</div>
+        <a href="#" class="mini-btn wa-register" data-msg="Assalamu Alaikum, I want to take admission in the Arabic Grammar Course - Level 3 (Mirqaat ul Qawaid). Please guide me about the admission test." target="_blank" rel="noopener">Register</a>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <div class="card-top">
+        <span class="tag">Free</span>
+        <span class="tag">Sisters Only</span>
+      </div>
+      <h3>Hifz Course</h3>
+      <div class="meta">
+        <span>&#128214; Free memorization program</span>
+        <span>&#128100; Details on request</span>
+      </div>
+      <div class="fee-row">
+        <div class="fee">Free</div>
+        <a href="https://whatsapp.com/channel/0029VbBDGtIC6ZvgX7o1IO1y" class="mini-btn" target="_blank" rel="noopener">Join Channel</a>
+      </div>
+    </div>
+
+    <div class="course-card level-2">
+      <div class="card-top">
+        <span class="tag">Ongoing</span>
+        <span class="tag">Brothers &amp; Sisters</span>
+      </div>
+      <h3>Seerat Course</h3>
+      <div class="meta">
+        <span>&#128218; Tajalliyyat e Nubuwwat</span>
+        <span>&#128337; Mon&ndash;Thu, 5:30&ndash;6:15 PM IST</span>
+        <span>&#128100; Shaikh Umair Salafi Hafizahullah</span>
+        <span>&#128221; Weekly quiz every Sunday &mdash; see below</span>
+      </div>
+      <div class="fee-row">
+        <div class="fee">PDF, playlist &amp; quiz below</div>
+        <a href="#seerat" class="mini-btn">Go to Section</a>
+      </div>
+    </div>
+
+    <!-- EDIT HERE: add more course cards as new courses are announced -->
+
+  </div>
+</section>
+
+<!-- ============================================================
+     SEERAT-E-NABI SECTION
+     EDIT HERE: update the PDF_LINK / PLAYLIST_LINK / quiz links below.
+     ============================================================ -->
+<section class="seerat-section" id="seerat">
+  <div class="section-head">
+    <div class="eyebrow">Mon&ndash;Thu &middot; 5:30&ndash;6:15 PM IST</div>
+    <h2>Seerat Course</h2>
+    <p>Tajalliyyat e Nubuwwat, by Shaikh Umair Salafi Hafizahullah. The class itself runs Monday to Thursday &mdash; only the quiz below is weekly.</p>
+  </div>
+
+  <div class="seerat-tabs">
+    <button class="seerat-tab-btn active" data-tab="playlist">YouTube Playlist</button>
+    <button class="seerat-tab-btn" data-tab="notes">Course PDF</button>
+    <button class="seerat-tab-btn" data-tab="attempt">Attempt Weekly Quiz</button>
+    <button class="seerat-tab-btn" data-tab="results">Weekly Quiz Results</button>
+  </div>
+
+  <div class="seerat-panels">
+
+    <div class="seerat-panel active" id="panel-playlist">
+      <div class="seerat-card">
+        <h3>YouTube Playlist</h3>
+        <p>Watch every Seerat class in order.</p>
+        <div style="position:relative; padding-bottom:56.25%; height:0; border-radius:14px; overflow:hidden; box-shadow:var(--shadow);">
+          <!-- EDIT HERE: replace the list= ID if the playlist link ever changes -->
+          <iframe src="https://www.youtube.com/embed/videoseries?list=PLfvPEkc-Zy4E" title="Seerat Course Playlist" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="seerat-panel" id="panel-notes">
+      <div class="seerat-card">
+        <h3>Course Notes (PDF)</h3>
+        <p>Seerat Course notes, compiled and shared as a Google Drive PDF.</p>
+        <a href="https://drive.google.com/file/d/1KPl8uyD3OYNf2HXVZ7ZGNIsxNPg_JQDl/view?usp=sharing" class="btn btn-primary" target="_blank" rel="noopener">Open PDF on Drive</a>
+      </div>
+    </div>
+
+    <div class="seerat-panel" id="panel-attempt">
+      <div class="seerat-card">
+        <h3>Attempt This Week's Quiz</h3>
+        <div class="quiz-schedule">
+          <span>&#128197; Every Sunday</span>
+          <span>&#128337; 8:00 AM &ndash; 11:00 PM IST</span>
+        </div>
+        <p>The quiz link becomes active only during the window above.</p>
+        <!-- EDIT HERE: update the href link every week -->
+        <a href="#" class="btn btn-primary" target="_blank" rel="noopener">Attempt Quiz</a>
+      </div>
+    </div>
+
+    <div class="seerat-panel" id="panel-results">
+      <div class="seerat-card">
+        <h3>Weekly Quiz Results</h3>
+        <p>Check your ranking and score for each week's quiz.</p>
+
+        <!--
+          EDIT HERE: add a new quiz result by copying one <a> line
+          inside #quizResultsList and updating the label + link.
+          Newest quiz should go at the top of the list.
+        -->
+        <div class="quiz-list" id="quizResultsList">
+          <a href="https://mukhlisa-collab.github.io/Seeratcourseresult/" target="_blank" rel="noopener">
+            <span>Quiz 1 &mdash; 5 July 2026</span>
+            <span class="arrow">&#8594;</span>
+          </a>
+          <!-- Add next week's result here, e.g.:
+          <a href="#" target="_blank" rel="noopener">
+            <span>Quiz 2 &mdash; 12 July 2026</span>
+            <span class="arrow">&#8594;</span>
+          </a>
+          -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     SPECIAL DUROOS
+     EDIT HERE: to add a durs, copy one .duroos-card block,
+     set the YouTube video ID in the data-yt attribute + link, and
+     the thumbnail will load automatically from YouTube.
+     ============================================================ -->
+<section id="duroos">
+  <div class="section-head">
+    <div class="eyebrow">Special Series</div>
+    <h2>Special Duroos</h2>
+    <p>Selected lessons and lectures, shared here as they're added.</p>
+  </div>
+
+  <div class="duroos-grid" id="duroosGrid">
+    <!-- EDIT HERE: to add a new durs, copy one block below, set the
+         video ID (from the youtu.be/VIDEO_ID link) and the title. -->
+
+    <a class="duroos-card" href="https://youtu.be/WJUMeHtaVm4" target="_blank" rel="noopener">
+      <div class="duroos-thumb">
+        <img src="https://img.youtube.com/vi/WJUMeHtaVm4/maxresdefault.jpg" alt="Durs thumbnail" onerror="this.src='https://img.youtube.com/vi/WJUMeHtaVm4/hqdefault.jpg'">
+        <div class="play"><span><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+      </div>
+      <div class="cap"><h4>Durs 1</h4></div>
+    </a>
+
+    <a class="duroos-card" href="https://youtu.be/8RSTu5Gd970" target="_blank" rel="noopener">
+      <div class="duroos-thumb">
+        <img src="https://img.youtube.com/vi/8RSTu5Gd970/maxresdefault.jpg" alt="Durs thumbnail" onerror="this.src='https://img.youtube.com/vi/8RSTu5Gd970/hqdefault.jpg'">
+        <div class="play"><span><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+      </div>
+      <div class="cap"><h4>Durs 2</h4></div>
+    </a>
+
+    <a class="duroos-card" href="https://youtu.be/QgN9eQn1AMI" target="_blank" rel="noopener">
+      <div class="duroos-thumb">
+        <img src="https://img.youtube.com/vi/QgN9eQn1AMI/maxresdefault.jpg" alt="Durs thumbnail" onerror="this.src='https://img.youtube.com/vi/QgN9eQn1AMI/hqdefault.jpg'">
+        <div class="play"><span><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+      </div>
+      <div class="cap"><h4>Durs 3</h4></div>
+    </a>
+
+    <a class="duroos-card" href="https://youtu.be/osde_k8R25M" target="_blank" rel="noopener">
+      <div class="duroos-thumb">
+        <img src="https://img.youtube.com/vi/osde_k8R25M/maxresdefault.jpg" alt="Durs thumbnail" onerror="this.src='https://img.youtube.com/vi/osde_k8R25M/hqdefault.jpg'">
+        <div class="play"><span><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
+      </div>
+      <div class="cap"><h4>Durs 4</h4></div>
+    </a>
+
+  </div>
+
+  <div class="duroos-subhead">
+    <h3>Free Course Playlists</h3>
+    <div class="rule"></div>
+  </div>
+
+  <div class="duroos-grid">
+    <!-- EDIT HERE: these are playlists (no single-video thumbnail), so they
+         use an icon card instead. Update the href and title as needed. -->
+
+    <a class="duroos-card playlist-card" href="https://youtube.com/playlist?list=PL0hM-w_Ph_2rpnmImg_C9Nw2fMLMy7Ffr" target="_blank" rel="noopener">
+      <div class="duroos-thumb"><div class="badge-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+      <div class="cap"><h4>Free Course Playlist 1</h4></div>
+    </a>
+
+    <a class="duroos-card playlist-card" href="https://youtube.com/playlist?list=PL0hM-w_Ph_2pJslK8scSLcUdZ8UeRPxi2" target="_blank" rel="noopener">
+      <div class="duroos-thumb"><div class="badge-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+      <div class="cap"><h4>Free Course Playlist 2</h4></div>
+    </a>
+
+    <a class="duroos-card playlist-card" href="https://youtube.com/playlist?list=PL0hM-w_Ph_2oKILRuwyvHPvcwobAzX_VQ" target="_blank" rel="noopener">
+      <div class="duroos-thumb"><div class="badge-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+      <div class="cap"><h4>Free Course Playlist 3</h4></div>
+    </a>
+
+    <a class="duroos-card playlist-card" href="https://youtube.com/playlist?list=PL0hM-w_Ph_2qRVvef493IIFGEwGySgjmu" target="_blank" rel="noopener">
+      <div class="duroos-thumb"><div class="badge-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+      <div class="cap"><h4>Free Course Playlist 4</h4></div>
+    </a>
+
+    <a class="duroos-card playlist-card" href="https://youtube.com/playlist?list=PL0hM-w_Ph_2oazdEGIBy05d8ksef40Nm8" target="_blank" rel="noopener">
+      <div class="duroos-thumb"><div class="badge-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+      <div class="cap"><h4>Free Course Playlist 5</h4></div>
+    </a>
+
+    <!-- EDIT HERE: replace the href once Qasas un Nabiyyeen Part 2 is uploaded,
+         and remove the coming-soon-tag + coming-soon class -->
+    <div class="duroos-card playlist-card coming-soon" style="position:relative;">
+      <span class="coming-soon-tag">Coming Soon</span>
+      <div class="duroos-thumb"><div class="badge-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
+      <div class="cap"><h4>Qasas un Nabiyyeen &mdash; Part 2</h4></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer id="contact">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">
+        <img src="assets/logo.png" alt="Markaz Ibn Abbas logo">
+        <span>Markaz Ibn Abbas</span>
+      </div>
+      <p>Arabic Language &amp; Islamic Studies &mdash; live online classes via Zoom, for brothers and sisters.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#seerat">Seerat-e-Nabi</a></li>
+        <li><a href="#duroos">Special Duroos</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <!-- EDIT HERE: update contact number / links -->
+        <li><a href="https://wa.me/919720971057" target="_blank" rel="noopener">WhatsApp: +91 97209 71057</a></li>
+        <li><a href="#" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="#" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 Markaz Ibn Abbas. All rights reserved.</span>
+    <span>Built with care for the Ummah.</span>
+  </div>
+</footer>
+
+<script>
+  // ---------- Mobile nav toggle ----------
+  document.getElementById('navToggle').addEventListener('click', function(){
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+  document.querySelectorAll('nav.links a').forEach(function(a){
+    a.addEventListener('click', function(){
+      document.getElementById('navLinks').classList.remove('open');
+    });
+  });
+
+  // ---------- Slideshow ----------
+  var track = document.getElementById('slidesTrack');
+  var slides = track.children;
+  var dotsWrap = document.getElementById('slideDots');
+  var current = 0;
+  var autoTimer;
+
+  for (var i = 0; i < slides.length; i++){
+    var dot = document.createElement('button');
+    if (i === 0) dot.classList.add('active');
+    dot.addEventListener('click', (function(idx){
+      return function(){ goToSlide(idx); resetAuto(); };
+    })(i));
+    dotsWrap.appendChild(dot);
+  }
+
+  function updateSlide(){
+    track.style.transform = 'translateX(-' + (current * 100) + '%)';
+    var dots = dotsWrap.children;
+    for (var i = 0; i < dots.length; i++){
+      dots[i].classList.toggle('active', i === current);
+    }
+  }
+
+  function goToSlide(idx){
+    current = (idx + slides.length) % slides.length;
+    updateSlide();
+  }
+
+  function changeSlide(dir){
+    goToSlide(current + dir);
+    resetAuto();
+  }
+
+  function resetAuto(){
+    clearInterval(autoTimer);
+    autoTimer = setInterval(function(){ goToSlide(current + 1); }, 5000);
+  }
+
+  updateSlide();
+  resetAuto();
+
+  // ---------- Seerat tabs ----------
+  var tabBtns = document.querySelectorAll('.seerat-tab-btn');
+  tabBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      tabBtns.forEach(function(b){ b.classList.remove('active'); });
+      btn.classList.add('active');
+      document.querySelectorAll('.seerat-panel').forEach(function(p){ p.classList.remove('active'); });
+      document.getElementById('panel-' + btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  // ---------- WhatsApp prepared-message register buttons ----------
+  // Any button with class "wa-register" and a data-msg="..." attribute
+  // automatically gets a wa.me link built for it — no manual encoding needed.
+  var WHATSAPP_NUMBER = '919720971057';
+  document.querySelectorAll('.wa-register').forEach(function(btn){
+    var msg = btn.dataset.msg || '';
+    btn.href = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encodeURIComponent(msg);
+  });
+</script>
+
 </body>
 </html>
